@@ -1,0 +1,30 @@
+import java.util.Scanner;
+import java.math.*;
+
+public class MainClassAtAll {
+
+	public static void main(String args[]) {
+
+		int firstNumber;
+		int secondNubmer;
+		Scanner sc = new Scanner(System.in);
+		System.out.println("input first nubmer: ");
+		firstNumber = sc.nextInt();
+		System.out.println("input second nubmer: ");
+		secondNubmer = sc.nextInt();
+		System.out.println(sumFiveDivision(firstNumber, secondNubmer));
+
+	}
+
+	public static int sumFiveDivision(int first, int second) {
+		int summ = 0;
+
+		for (int i = first; i < second; i++) {
+			if (i % 5 == 0) {
+				summ += i;
+			}
+		}
+		return summ;
+	}
+
+}
