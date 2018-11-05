@@ -1,0 +1,34 @@
+import java.util.Scanner;
+import java.math.*;
+
+public class MainClassAtAll {
+
+	public static void main(String args[]) {
+
+		int num1, pass;
+		int secretnumber = 1337;
+
+		Scanner sc = new Scanner(System.in);
+
+		System.out.println("Enter the floor you want to be on");
+		num1 = sc.nextInt();
+
+		if (num1 < 1 || num1 > 9)
+			System.out.println("error. wrong floor");
+
+		else if (num1 > 0 && num1 < 5)
+			System.out.println("okay. lets.go on low");
+
+		else if (num1 > 6 && num1 < 10)
+			System.out.println("okay. lets.go on higth");
+
+		else {
+			System.out.println("VIP floors. Enter the pass");
+			pass = sc.nextInt();
+			if (pass == secretnumber)
+				System.out.println("Welcome, sir");
+			else
+				System.out.println("error. wrong pass");
+		}
+
+	}
