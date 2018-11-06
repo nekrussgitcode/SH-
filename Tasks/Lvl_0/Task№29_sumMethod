@@ -1,0 +1,24 @@
+import java.util.Scanner;
+import java.math.*;
+
+public class MainClassAtAll {
+
+	public static void main(String args[]) {
+
+		System.out.println("Please, enter 2 numbers: ");
+		System.out.println(returnSum(0, 0));
+
+	}
+
+	static int returnSum(int first, int second) {
+		int summ = 0;
+		Scanner sc = new Scanner(System.in);
+		first = sc.nextInt();
+		second = sc.nextInt();
+
+		for (int i = first; i <= second; i++)
+			summ += i;
+		return summ;
+	}
+
+}
