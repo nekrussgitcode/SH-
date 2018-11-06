@@ -1,0 +1,29 @@
+import java.util.Scanner;
+import java.math.*;
+
+public class MainClassAtAll {
+
+public static void main(String args[]) {
+
+		System.out.println("hello!");
+		findSum();
+
+	}
+
+	public static void findSum() {
+		int summ = 0;
+		int input = -1;
+		Scanner sc = new Scanner(System.in);
+		while (input != 0) {
+
+			System.out.println("Enter the number, please: ");
+
+			input = sc.nextInt();
+			summ = summ + input;
+
+		}
+
+		System.out.println("Summ = " + summ);
+
+	}
+}
