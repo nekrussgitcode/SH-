@@ -1,0 +1,28 @@
+import java.util.Scanner;
+import java.math.*;
+
+public class MainClassAtAll {
+
+	public static void main(String args[]) {
+
+		char c = '#';
+		int counter;
+
+		Scanner sc = new Scanner(System.in);
+
+		System.out.println("Enter the square size: ");
+
+		counter = sc.nextInt();
+
+		for (int i = 0; i < counter; i++) {
+			for (int j = 0; j < counter; j++) {
+				System.out.print(c);
+
+			}
+			System.out.println("");
+
+		}
+
+	}
+
+}
