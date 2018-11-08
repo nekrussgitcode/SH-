@@ -1,0 +1,45 @@
+
+public class MainClassAtAll {
+
+	public static void main(String args[]) {
+
+		double[] firstArray = { 10, 5, 4, 6, 8, 10, 7, 8, 29, 10 };
+		double[] secondArray = { 0, 1, 2, 3, 4, 5, 6, 7, 8, 19 };
+
+		workOnArrays(10, firstArray, secondArray);//size должен быть >= кол-ву элементов. 
+
+	}
+
+	public static void workOnArrays(int size, double[] firstArray, double[] secondArray) {
+
+		double[] minusArray = new double[(int) size];
+
+		for (int i = 0; i < firstArray.length; i++) {
+
+			minusArray[i] = firstArray[i] - secondArray[i];
+		}
+
+		for (int i = 0; i < secondArray.length; i++) {
+			secondArray[i] = secondArray[i] + firstArray[i];
+		}
+
+		System.out.println("FirstArray: ");
+
+		for (int i = 0; i < firstArray.length; i++) {
+
+			System.out.print(minusArray[i] + " | ");
+
+		}
+
+		System.out.println(" ");
+		System.out.println("Second Array: ");
+
+		for (int i = 0; i < secondArray.length; i++) {
+
+			System.out.print(secondArray[i] + " | ");
+
+		}
+
+	}
+
+}
