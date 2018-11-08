@@ -1,0 +1,46 @@
+import java.util.Scanner;
+
+public class MainClassAtAll {
+
+	public static void main(String args[]) {
+
+		int first, second, third;
+
+		Scanner sc = new Scanner(System.in);
+
+		System.out.println("hello! Please, input the numbers! ");
+		first = sc.nextInt();
+		System.out.println("and second: ");
+		second = sc.nextInt();
+		System.out.println("and third: ");
+		third = sc.nextInt();
+		System.out.println("Now, we have to get result!: ");
+		System.out.println(workOnThreeNum(first, second, third));
+
+	}
+
+	public static int workOnThreeNum(int first, int second, int third) {
+		int summ = first + second + third;// сумма
+		int desigion;
+
+		if (first == second && second == third) // если равны -1
+			desigion = -1;
+		else if (summ >= 0 && summ <= 100) { // если диапазон суммы 0-100 - 1
+			desigion = 1;
+		} else { // находим наибольшее из введенного
+			if (first > second && first > third) {
+				desigion = first;
+			} else if (first > second && first < third) {
+				desigion = third;
+			} else {
+				if (second > third)
+					desigion = second;
+				else
+					desigion = third;
+			}
+		}
+
+		return desigion;
+	}
+
+}
